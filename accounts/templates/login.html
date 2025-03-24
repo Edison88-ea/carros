@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+  table {
+    margin-left: 15px;
+  }
+
+  .btn {
+    padding: 10px;
+    margin: 15px;
+    border: #0096c7;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #0096c7;
+  }
+
+  .btn:hover {
+    background-color: #32bbe8;
+  }
+</style>
+
+<form method="post">
+  {% csrf_token %}
+  <table>
+    {{ login_form.as_table }}
+  </table>
+  <input type="submit" value="Entrar" class="btn">
+</form>
+{% endblock %}
